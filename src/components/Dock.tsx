@@ -15,31 +15,37 @@ export const Dock: React.FC = () => {
         display: 'flex',
         gap: '24px',
         padding: '16px 32px',
-        borderRadius: '24px',
-        // Increased blur for the dock to mimic macOS
+        borderRadius: 'var(--radius-main)', // Inherits 36px logic
         backdropFilter: 'blur(30px) saturate(180%)',
         WebkitBackdropFilter: 'blur(30px) saturate(180%)',
       }}>
-        <DockItem icon={<Code2 size={24} strokeWidth={1.5} />} href="#" tooltip="GitHub" />
-        <DockItem icon={<Camera size={24} strokeWidth={1.5} />} href="#" tooltip="Instagram" />
-        <DockItem icon={<MessageSquare size={24} strokeWidth={1.5} />} href="#" tooltip="Twitter" />
-        <DockItem icon={<Mail size={24} strokeWidth={1.5} />} href="mailto:hello@example.com" tooltip="Email" />
+        <DockItem icon={<Code2 size={24} strokeWidth={1.5} />} href="https://github.com" target="_blank" tooltip="GitHub" />
+        <DockItem icon={<Camera size={24} strokeWidth={1.5} />} href="https://instagram.com" target="_blank" tooltip="Instagram" />
+        <DockItem icon={<MessageSquare size={24} strokeWidth={1.5} />} href="https://twitter.com" target="_blank" tooltip="Twitter" />
+        <DockItem icon={<Mail size={24} strokeWidth={1.5} />} href="mailto:hello@example.com" tooltip="发邮件" />
       </GlassCard>
     </div>
   );
 };
 
-const DockItem = ({ icon, href, tooltip }: { icon: React.ReactNode, href: string, tooltip: string }) => (
-  <a href={href} className="dock-item" title={tooltip} style={{
-    color: 'rgba(255,255,255,0.7)',
-    transition: 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '10px',
-    borderRadius: '16px',
-    textDecoration: 'none',
-  }}>
+const DockItem = ({ icon, href, tooltip, target }: { icon: React.ReactNode, href: string, tooltip: string, target?: string }) => (
+  <a 
+    href={href} 
+    target={target} 
+    rel={target === '_blank' ? "noopener noreferrer" : undefined}
+    className="dock-item" 
+    title={tooltip} 
+    style={{
+      color: 'rgba(255,255,255,0.7)',
+      transition: 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '10px',
+      borderRadius: '20px',
+      textDecoration: 'none',
+    }}
+  >
     {icon}
   </a>
 );

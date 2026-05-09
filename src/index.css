@@ -3,11 +3,15 @@
   --glass-border: rgba(255, 255, 255, 0.12);
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   --glass-blur: blur(24px);
-  --radius-main: 24px;
+  --radius-main: 36px;
   
   font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color-scheme: dark;
   color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {

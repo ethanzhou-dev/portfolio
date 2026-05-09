@@ -26,18 +26,33 @@ function App() {
         
         {/* Hero Section */}
         <section style={{ 
-          minHeight: '70vh', 
+          minHeight: '85vh', 
           display: 'flex', 
           flexDirection: 'column', 
           justifyContent: 'center' 
         }}>
-          <GlassCard style={{ padding: '56px', maxWidth: '640px' }}>
+          <GlassCard style={{ padding: '56px', maxWidth: '720px' }}>
+            <div style={{
+              width: '72px', height: '72px',
+              borderRadius: '50%',
+              background: 'linear-gradient(135deg, #0ea5e9, #8b5cf6)',
+              marginBottom: '28px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 8px 32px rgba(139, 92, 246, 0.3)',
+              fontSize: '32px'
+            }}>✨</div>
+            
             <h1 style={{ 
-              fontSize: '3.5rem', 
+              fontSize: '4rem', 
               fontWeight: 700, 
               marginBottom: '20px', 
               letterSpacing: '-0.03em',
-              lineHeight: 1.1
+              lineHeight: 1.1,
+              background: 'linear-gradient(to right, #ffffff, #a5b4fc)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
             }}>
               你好，我是 Tzucet。
             </h1>
@@ -45,16 +60,29 @@ function App() {
               fontSize: '1.25rem', 
               color: 'rgba(255, 255, 255, 0.85)', 
               lineHeight: 1.6,
-              fontWeight: 300
+              fontWeight: 300,
+              marginBottom: '32px'
             }}>
               艺术与科技专业大二学生。 <br/>
               探索数字美学、交互设计与流体体验的交汇点。
             </p>
+
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '40px' }}>
+              <span className="badge">🎨 UI/UX 设计</span>
+              <span className="badge">💻 前端开发</span>
+              <span className="badge">🌌 空间计算</span>
+              <span className="badge">✨ 生成艺术</span>
+            </div>
+
+            <div style={{ display: 'flex', gap: '16px' }}>
+              <a href="#archive" className="cta-primary">浏览作品</a>
+              <a href="mailto:hello@example.com" className="cta-secondary">联系我</a>
+            </div>
           </GlassCard>
         </section>
 
         {/* Archive / Portfolio Grid */}
-        <section style={{ marginTop: '40px' }}>
+        <section id="archive" style={{ marginTop: '40px', scrollMarginTop: '100px' }}>
           <h2 style={{ 
             fontSize: '2.25rem', 
             marginBottom: '40px', 
@@ -72,7 +100,7 @@ function App() {
                   width: '100%',
                   aspectRatio: '16/9',
                   background: 'rgba(0,0,0,0.3)',
-                  borderRadius: '12px',
+                  borderRadius: '20px',
                   marginBottom: '24px',
                   position: 'relative',
                   overflow: 'hidden'
@@ -127,6 +155,44 @@ function App() {
         @keyframes shimmer {
           0% { background-position: 200% 0; }
           100% { background-position: -200% 0; }
+        }
+        .cta-primary {
+          padding: 12px 28px;
+          border-radius: 36px;
+          background: #ffffff;
+          color: #000000;
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+          display: inline-block;
+        }
+        .cta-primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+        }
+        .cta-secondary {
+          padding: 12px 28px;
+          border-radius: 36px;
+          background: rgba(255,255,255,0.05);
+          border: 1px solid rgba(255,255,255,0.15);
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+          display: inline-block;
+        }
+        .cta-secondary:hover {
+          background: rgba(255,255,255,0.1);
+          transform: translateY(-2px);
+        }
+        .badge {
+          padding: 8px 16px;
+          border-radius: 24px;
+          background: rgba(255,255,255,0.06);
+          border: 1px solid rgba(255,255,255,0.1);
+          font-size: 0.9rem;
+          color: rgba(255,255,255,0.9);
+          backdrop-filter: blur(10px);
         }
       `}</style>
     </>
