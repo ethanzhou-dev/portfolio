@@ -48,33 +48,38 @@ function App() {
           animate="visible"
           variants={staggerContainer}
           style={{ 
-            minHeight: '70vh', 
+            minHeight: '75vh', 
             display: 'flex', 
             flexDirection: 'column', 
-            justifyContent: 'center' 
+            justifyContent: 'center',
+            paddingLeft: '20px'
           }}
         >
           <motion.div variants={fadeUpVariant}>
-            <GlassCard style={{ padding: '56px', maxWidth: '640px' }}>
-              <h1 style={{ 
-                fontSize: '3.5rem', 
-                fontWeight: 700, 
-                marginBottom: '20px', 
-                letterSpacing: '-0.03em',
-                lineHeight: 1.1
-              }}>
-                你好，我是周易辉。
-              </h1>
-              <p style={{ 
-                fontSize: '1.25rem', 
-                color: 'rgba(255, 255, 255, 0.85)', 
-                lineHeight: 1.6,
-                fontWeight: 300
-              }}>
-                艺术与科技专业大二学生。 <br/>
-                探索数字美学、交互设计与流体体验的交汇点。
-              </p>
-            </GlassCard>
+            <h1 style={{ 
+              fontSize: '4.5rem', 
+              fontWeight: 700, 
+              marginBottom: '24px', 
+              letterSpacing: '-0.04em',
+              lineHeight: 1.05,
+              textShadow: '0 10px 40px rgba(0,0,0,0.5)',
+              maxWidth: '800px'
+            }}>
+              你好，<br/>我是周易辉。
+            </h1>
+          </motion.div>
+          <motion.div variants={fadeUpVariant}>
+            <p style={{ 
+              fontSize: '1.35rem', 
+              color: 'rgba(255, 255, 255, 0.9)', 
+              lineHeight: 1.7,
+              fontWeight: 300,
+              textShadow: '0 4px 20px rgba(0,0,0,0.4)',
+              maxWidth: '600px'
+            }}>
+              艺术与科技专业大二学生。 <br/>
+              探索数字美学、交互设计与流体体验的交汇点。
+            </p>
           </motion.div>
         </motion.section>
 
@@ -106,7 +111,7 @@ function App() {
             {projects.map((project, i) => (
               <motion.div key={i} variants={fadeUpVariant}>
                 <GlassCard className="project-card" style={{ padding: '24px', cursor: 'pointer', height: '100%' }}>
-                  <div style={{
+                  <div className="project-image-wrapper" style={{
                     width: '100%',
                     aspectRatio: '16/9',
                     background: 'rgba(0,0,0,0.3)',
@@ -116,7 +121,7 @@ function App() {
                     overflow: 'hidden'
                   }}>
                     {/* Subtle placeholder for project image */}
-                    <div style={{
+                    <div className="project-image-inner" style={{
                       position: 'absolute',
                       inset: 0,
                       background: 'linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.05) 50%, transparent 60%)',

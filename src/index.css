@@ -134,6 +134,14 @@ body {
   box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.4);
 }
 
+.project-image-inner {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-card:hover .project-image-inner {
+  transform: scale(1.05);
+}
+
 .dock-item:hover {
   color: #fff !important;
   background: rgba(255, 255, 255, 0.15);
