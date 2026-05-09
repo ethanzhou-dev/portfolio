@@ -5,7 +5,7 @@
   --glass-blur: blur(24px);
   --radius-main: 36px;
   
-  font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color-scheme: dark;
   color: #ffffff;
 }
