@@ -43,7 +43,7 @@ function App() {
             </h1>
             <p style={{ 
               fontSize: '1.25rem', 
-              color: 'rgba(255, 255, 0.85)', 
+              color: 'rgba(255, 255, 255, 0.85)', 
               lineHeight: 1.6,
               fontWeight: 300
             }}>
