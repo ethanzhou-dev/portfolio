@@ -15,7 +15,7 @@ export const Dock: React.FC = () => {
         display: 'flex',
         gap: '24px',
         padding: '16px 32px',
-        borderRadius: '32px',
+        borderRadius: '24px',
         // Increased blur for the dock to mimic macOS
         backdropFilter: 'blur(30px) saturate(180%)',
         WebkitBackdropFilter: 'blur(30px) saturate(180%)',

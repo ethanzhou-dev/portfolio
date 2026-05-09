@@ -5,10 +5,10 @@ import './index.css';
 
 function App() {
   const projects = [
-    { title: 'Generative Echo', tags: 'WebGL, Audio Reactive' },
-    { title: 'Spatial Interfaces', tags: 'AR, Interaction Design' },
-    { title: 'Fluid Type', tags: 'Typography, Three.js' },
-    { title: 'Data Sculptures', tags: 'Data Viz, Generative Art' },
+    { title: '生成回声', tags: 'WebGL, 音频响应' },
+    { title: '空间交互界面', tags: 'AR, 交互设计' },
+    { title: '流体排版', tags: '字体设计, Three.js' },
+    { title: '数据雕塑', tags: '数据可视化, 生成艺术' },
   ];
 
   return (
@@ -39,7 +39,7 @@ function App() {
               letterSpacing: '-0.03em',
               lineHeight: 1.1
             }}>
-              Hi, I'm Tzucet.
+              你好，我是 Tzucet。
             </h1>
             <p style={{ 
               fontSize: '1.25rem', 
@@ -47,8 +47,8 @@ function App() {
               lineHeight: 1.6,
               fontWeight: 300
             }}>
-              Art & Technology Sophomore. <br/>
-              Exploring the intersection of digital aesthetics, interaction, and fluid experiences.
+              艺术与科技专业大二学生。 <br/>
+              探索数字美学、交互设计与流体体验的交汇点。
             </p>
           </GlassCard>
         </section>
@@ -60,7 +60,7 @@ function App() {
             marginBottom: '40px', 
             fontWeight: 600,
             letterSpacing: '-0.02em'
-          }}>Archive</h2>
+          }}>作品归档</h2>
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
@@ -72,7 +72,7 @@ function App() {
                   width: '100%',
                   aspectRatio: '16/9',
                   background: 'rgba(0,0,0,0.3)',
-                  borderRadius: '16px',
+                  borderRadius: '12px',
                   marginBottom: '24px',
                   position: 'relative',
                   overflow: 'hidden'
@@ -102,7 +102,7 @@ function App() {
                 marginBottom: '32px', 
                 fontWeight: 600,
                 letterSpacing: '-0.02em' 
-              }}>Philosophy</h2>
+              }}>设计理念</h2>
               <div style={{ 
                 fontSize: '1.15rem', 
                 color: 'rgba(255, 255, 255, 0.85)', 
@@ -110,10 +110,10 @@ function App() {
                 fontWeight: 300
               }}>
                 <p style={{ marginBottom: '24px' }}>
-                  I believe that technology is the most powerful medium for modern art. By combining code with organic visual elements, I aim to create interfaces that feel alive, intuitive, and deeply personal.
+                  我相信技术是现代艺术最强大的媒介。通过将代码与有机的视觉元素结合，我致力于创造充满生命力、直观且触动人心的界面。
                 </p>
                 <p>
-                  Currently studying Art & Tech, focusing on spatial computing, generative art, and next-generation UI paradigms like Liquid Glass. This archive is a living document of my experiments and creations.
+                  目前就读于艺术与科技专业，专注于空间计算、生成艺术以及如“液态玻璃”等下一代 UI 范式。这份归档是我实验与创作的生动记录。
                 </p>
               </div>
             </div>
