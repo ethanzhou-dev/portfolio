@@ -30,6 +30,7 @@ function App() {
 
   return (
     <>
+      <div className="noise-overlay" />
       <LiquidBackground />
       
       <main style={{ 
