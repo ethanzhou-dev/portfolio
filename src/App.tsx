@@ -45,16 +45,13 @@ function App() {
             }}>✨</div>
             
             <h1 style={{ 
-              fontSize: '4rem', 
+              fontSize: '3.5rem', 
               fontWeight: 700, 
               marginBottom: '20px', 
               letterSpacing: '-0.03em',
-              lineHeight: 1.1,
-              background: 'linear-gradient(to right, #ffffff, #a5b4fc)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
+              lineHeight: 1.1
             }}>
-              你好，我是 Tzucet。
+              你好，我是周易辉。
             </h1>
             <p style={{ 
               fontSize: '1.25rem', 
