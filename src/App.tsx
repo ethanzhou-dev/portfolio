@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { LiquidBackground } from './components/LiquidBackground';
 import { GlassCard } from './components/GlassCard';
 import { Dock } from './components/Dock';
@@ -13,12 +13,12 @@ function App() {
   ];
 
   // Animation variants
-  const fadeUpVariant = {
+  const fadeUpVariant: Variants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1] as const } }
   };
 
-  const staggerContainer = {
+  const staggerContainer: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
